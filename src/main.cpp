@@ -53,7 +53,35 @@ void autonomous(void) {
   // ..........................................................................
   // Insert autonomous user code here.
   // ..........................................................................
-  auton();
+  
+  /*
+  InertialSensor.calibrate();
+  InertialSensor.setRotation(0, degrees);
+  InertialSensor.setHeading(0, degrees);
+  while(1){
+    getAngle();
+  }
+  //auton();
+  
+  // Limit control
+  leftDrive.setVelocity(20, percent);
+  rightDrive.setVelocity(-20, percent);
+
+  // move motors to the desired position
+  for (int i = 0; i < 10; i++){
+    leftDrive.spin(forward);
+    rightDrive.spin(forward);
+    wait(100, msec);
+  }
+  leftDrive.stop();
+  rightDrive.stop();
+  */
+  //calibrateLimu();
+  //rotateTest(90);
+  
+  //testPID();
+  rotatePD(90);
+  
 }
 
 /*---------------------------------------------------------------------------*/

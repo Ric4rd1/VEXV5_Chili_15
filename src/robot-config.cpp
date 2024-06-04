@@ -12,12 +12,12 @@ brain Brain;
 controller Controller1 = controller(primary);
 
 // Inertial sensor
-inertial InertialSensor(PORT10);
+inertial InertialSensor(PORT16);
 
 // Chasis motors
 motor leftMotorFront(PORT12, ratio18_1, true);
 motor leftMotorBack(PORT11, ratio18_1, true);
-motor rightMotorFront(PORT20, ratio18_1, false);
+motor rightMotorFront(PORT9, ratio18_1, false);
 motor rightMotorBack(PORT19, ratio18_1, false);
 
 motor_group leftDrive(leftMotorFront, leftMotorBack);
